@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Nubank</title>
+    <style>
+        body{
+            background-color: rgb(36,36,36);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container{
+            background-color: #820ad1;
+            padding: 1em;
+            border-radius: 10px;
+            width: 15em;
+            height: 25em;
+            box-shadow: 5px 8px 8px #000;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: 2s;
+            
+        }
+        img[alt=mastercard]{
+            width: 30%;
+        }
+        img[alt=chip]
+        {
+            width: 40%;
+            transform: rotate(90deg);
+        }
+        .footer img{
+            width: 35%;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .header{
+            height: 70%;
+            width: 1zz; 
+        }
+        .box-img{
+            display: flex;
+            align-items: flex-start;
+        }
+        .footer{
+            height: 30%;
+            
+         
+        }
+        .footer p{
+            margin-left: 1em;
+        }
+        .aproximacao{
+
+            margin-top: 10px;
+            transform: translate(-75%);
+             
+       
+        }
+
+        .card-number {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        .card-expiry {
+            font-size: 1.2em;
+        }
+
+        .front {
+            z-index: 2;
+        }
+
+        .back {
+            background-color:#820ad1;
+            transform: rotateY(180deg);
+            padding: 1em;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            box-shadow: 5px 8px 8px #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            
+           
+        }
+
+        .back img {
+            width: 30%;
+            margin-top: 1em;
+        }
+
+        .back .card-number {
+            margin-top: 2em;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .back .card-expiry {
+            margin-top: 1em;
+            font-size: 1.5em;
+        }
+
+        .container:hover {
+            transform: rotateY(180deg);
+        }
+        .card .face.back {
+	transform: rotateY(180deg);
+}
+
+
+
+
+
+#card-number {
+	letter-spacing: 2px;
+	font-size: 1.2rem;
+}
+
+#card-info .informations:not(:first-child) {
+	margin-left: 1px;
+}
+
+#card-info .flex .informations {
+	align-items: center;
+    
+}
+
+#card-info .flex .informations .label {
+	display: block;
+	font-size: 0.4rem;
+	margin-right: 4px;
+	width: 30px;
+}
+
+
+
+.card:hover .face.back {
+	transform: rotateY(360deg);
+}
+.ajuda{
+
+
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 4px;
+}
+.Brasil{
+
+    font-size: 10px;
+    line-height: 4px;
+}
+
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>Edinaldo Almeida</h1>
+    <br>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <div class="box-img">
+                    <img src="mastercard_logo.png" alt="mastercard">
+                    <img src="chip.png" alt="chip">
+                    <div class="aproximacao">
+
+                        <img src="sem-contato.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Edinaldo Almeida</p>
+                <img src="nubank_logo.png" alt="nubank">
+            </div>
+        </div>
+        
+        <div class="face back absolute">
+
+            <div class="sinal">
+
+                <img src="mastercard_logo.png" alt="">
+
+            </div>
+        <div id="graybar" class="absolute"></div>
+        <div id="card-info" class="absolute"><br>
+
+
+         <div class="ajuda">
+
+            <p>Precisa de ajuda?</p>
+            <p>Entre no nosso app.</p><br>
+            
+         </div>
+
+         <div class="Brasil">
+
+          <h4>Brasil</h4>
+            <p>08005912117</p>
+            <br>
+            <br>
+            <br>
+            <br>
+         </div>
+
+            <h4>gold</h4>
+        <p id="card-number">1234 1568 1981 0000</p>
+        <div class="flex">
+            <p class="flex informations">
+            <span class="label">AGENCIA</span>
+            <sub><span>0001</span></sub>
+            </p>
+
+            <p class="flex informations">
+            <span class="label"> VALIDADE</span>
+            <sub><span>12/29</span></sub>
+            </p>
+
+            <p class="flex informations">
+            <span class="label">SVC</span>
+            <sub><span>100</span></sub>
+        </p>
+
+        
+
+
+
+             </div>
+            </div>
+         </div>
+       </div>
+
+  
+</body>
